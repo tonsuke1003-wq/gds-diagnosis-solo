@@ -133,10 +133,10 @@ p {
 }
 
 .start-label {
-  font-size: 0.75rem;
+  font-size: 1.5rem;
   letter-spacing: 0.1em;
   color: var(--color-primary);
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .start-main-title {
@@ -604,8 +604,6 @@ p {
 
   <!-- ===== START SCREEN ===== -->
   <div class="screen start-screen active" id="screen-start">
-    <div class="brand-logo">GDS — 小倉なおよ</div>
-
     <div class="start-title-area">
       <div class="start-label">永続型資産コンテキスト™️</div>
       <h1 class="start-main-title">診断ツール</h1>
@@ -1073,7 +1071,7 @@ const TYPE_LABELS = {
 
     // CTA テキストをタイプに合わせて動的に設定
     document.getElementById('cta-line-text').textContent =
-      'あなたの「' + TYPE_LABELS[result.mainType] + '」な人が、どうしたらより「あなたらしく伝えられるか」をお伝えできる場をご用意しました。詳細は公式LINEのリッチメニューから。';
+      '「' + data.name + '」が、どうしたらより「あなたらしく伝えられるか」をお伝えできる場をご用意しました。詳細は公式LINEのリッチメニューから。';
 
     const total = Object.values(result.scores).reduce((a, b) => a + b, 0) || 1;
     const barsEl = document.getElementById('type-bars');
